@@ -1,6 +1,6 @@
 <template>
 
-      <b-container>
+    <b-container>
 
       <b-row>
 
@@ -13,6 +13,7 @@
         </b-col>
         <b-col>
 
+            helloooo
         </b-col>
       </b-row>
     </b-container>
