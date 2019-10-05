@@ -3,7 +3,7 @@ const cluster = require('cluster');
 const app     = require('./src/app');
 const http    = require('http');
 const path    = require('path');
-require('dotenv').config({path: path.resolve('./src/config/environment.env')});
+require('dotenv').config({path: path.resolve('./src/config/.env')});
 const logger  = require('./src/config/logger');
 
 if (cluster.isMaster)
@@ -84,7 +84,7 @@ else
         logger.info(`server is listening on port: ${bind}`);
     };
 
-    const port = normalizePort(process.env.SERVER_PORT || 3000);
+    const port = normalizePort(process.env.SERVER_PORT || process.env.PORT);
 
     app.set('port', port);
 
