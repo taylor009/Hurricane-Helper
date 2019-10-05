@@ -2,24 +2,24 @@
 
     <b-container>
 
-      <b-row>
+      <b-row class="h-100 d-flex align-items-center justify-content-center">
 
         <b-col>
 
-          <div id="containerDiv" style="width: 320px; min-width: 200px; height: 465px; min-height: 400px; ">
+          <div id="containerDiv"><!--Amazon CCP will go here--></div>
 
-            <!--Amazon CCP will go here-->
-          </div>
         </b-col>
-        <b-col>
+        <b-col class="">
 
-            helloooo
+            <form-example />
         </b-col>
       </b-row>
     </b-container>
 </template>
 
 <script>
+
+    import FormExample from '../components/Forms/ExampleForm';
 
     export default {
 
@@ -39,9 +39,20 @@
                 }
             });
         },
+        components : {
+
+            FormExample
+        }
     }
 </script>
 
 <style scoped>
 
+    #containerDiv {
+
+        width      : 320px;
+        min-width  : 320px;
+        height     : 470px;
+        min-height : 470px;
+    }
 </style>

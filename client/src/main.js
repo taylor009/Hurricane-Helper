@@ -10,6 +10,9 @@ Vue.use(BootstrapVue);
 
 import './registerServiceWorker';
 
+import _ from 'lodash';
+Vue.prototype._ = _;
+
 Vue.config.productionTip = false;
 
 
