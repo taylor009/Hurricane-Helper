@@ -4,7 +4,7 @@
 
     <keep-alive>
 
-      <router-view style="padding-top: 75px; padding-bottom: 95px; height: 100%; min-height: 100vh" />
+      <router-view style="padding-top: 75px; height: 100%; min-height: 100vh" />
     </keep-alive>
 
     <footer-comp style="height: 95px" />
