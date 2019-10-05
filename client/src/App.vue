@@ -1,80 +1,46 @@
 <template>
   <div id="app">
+    <navbar-comp style="height: 75px" />
 
-    <navbar />
-    <div id="nav">
+    <router-view style="padding-top: 75px; padding-bottom: 95px; height: 100vh" />
 
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-
-
-      <b-container>
-
-        <b-row>
-
-          <b-col>
-
-            <div id="containerDiv" style="width: 320px; min-width: 200px; height: 465px; min-height: 400px; ">
-
-              <!--Amazon CCP will go here-->
-            </div>
-          </b-col>
-          <b-col>
-
-            <router-view/>
-          </b-col>
-        </b-row>
-      </b-container>
+    <footer-comp style="height: 95px" />
   </div>
 </template>
 
 <script>
+import NavbarComp from "./components/NavbarComp";
+import FooterComp from "./components/FooterComp";
 
-  import Navbar from './components/Navbar';
+export default {
+  data: () => ({}),
 
-  export default {
-
-    data: () => ({
-
-      ccpUrl: "https://pbt-hackathon.awsapps.com/connect/ccp#", //replace with the CCP URL for your Amazon Connect instance
-    }),
-    mounted(){
-
-      connect.core.initCCP( containerDiv, {
-
-        ccpUrl     : this.ccpUrl,
-        loginPopup : true,
-        softphone  : {
-
-            allowFramedSoftphone: true
-        }
-      });
-    },
-    components : {
-
-      Navbar
-    }
+  components: {
+    NavbarComp,
+    FooterComp
   }
+};
 </script>
 
 <style lang="scss">
+html,
+body,
+#app {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-  #nav {
-    padding: 30px;
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
-      }
-    }
-  }
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+
+  background-color: #f3f6f9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 </style>
