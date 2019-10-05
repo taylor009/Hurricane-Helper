@@ -1,6 +1,8 @@
 'use strict';
 const dynamoose = require('dynamoose');
+const AWS = require('aws-sdk');
 
+console.log("Region: ", AWS.config.region);
 const Schema = dynamoose.Schema;
 
 const UserSchema = new Schema({

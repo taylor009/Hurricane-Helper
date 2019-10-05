@@ -6,6 +6,8 @@ const path      = require('path');
 require('dotenv').config({path: path.resolve('./src/config/.env')});
 const logger = require('./src/config/logger');
 
+
+
 const normalizePort = val =>
 {
     const port = parseInt(val, 10);

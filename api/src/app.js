@@ -2,18 +2,55 @@
 const path = require('path');
 require('dotenv').config({path: path.resolve('./config/.env')});
 const express    = require('express');
+const AWS        = require('aws-sdk');
+const dynamoose  = require('dynamoose');
 const morgan     = require('morgan');
 const helmet     = require('helmet');
 const bodyParser = require('body-parser');
 const logger     = require('./config/logger');
 
-const dynamoose = require('dynamoose');
-const dynalite = require('dynalite');
+const myCredentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
+let myConfig        = new AWS.Config({
+    credentials: myCredentials, region     : 'us-east-1',
+});
 
-const startUpAndReturnDynamo = async () => {
-    const dynaliteServer = dynalite();
-    await dynaliteServer.listen(8000);
-    return dynaliteServer;
+
+// Load the AWS SDK for Node.js
+// Set the region
+AWS.config.update({region: "us-east-1"});
+
+// Create the DynamoDB service object
+const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+
+const params = {
+    AttributeDefinitions : [
+        {
+            AttributeName: 'CUSTOMER_ID',
+            AttributeType: 'N'
+        },
+        {
+            AttributeName: 'CUSTOMER_NAME',
+            AttributeType: 'S'
+        }
+    ],
+    KeySchema            : [
+        {
+            AttributeName: 'CUSTOMER_ID',
+            KeyType      : 'HASH'
+        },
+        {
+            AttributeName: 'CUSTOMER_NAME',
+            KeyType      : 'RANGE'
+        }
+    ],
+    ProvisionedThroughput: {
+        ReadCapacityUnits : 1,
+        WriteCapacityUnits: 1
+    },
+    TableName            : 'CUSTOMER_LIST',
+    StreamSpecification  : {
+        StreamEnabled: false
+    }
 };
 
 const createDynamooseInstance = () => {
@@ -22,25 +59,11 @@ const createDynamooseInstance = () => {
         secretAccessKey: 'SECRET',
         region: 'us-east-1'
     });
-    dynamoose.local(); // This defaults to "http://localhost:8000"
+    dynamoose.setDDB(ddb); // This defaults to "http://localhost:8000"
 };
 
-// const createAndGetCat = async () => {
-//     const Cat = dynamoose.model('Cat', {id: Number, name: String});
-//     const garfield = new Cat({id: 666, name: 'Garfield'});
-//     await garfield.save();
-//     const badCat = await Cat.get(666);
-//     return badCat;
-// };
 
-const bootStrap = async () => {
-    await startUpAndReturnDynamo();
-    createDynamooseInstance();
-    // const badCat = await createAndGetCat();
-    // console.log('Never trust a smiling cat. - ' + badCat.name);
-};
-
-bootStrap().then();
+createDynamooseInstance();
 
 // Routes
 const signUpRoutes = require('./routes/signup');
