@@ -36,11 +36,15 @@ const createDynamooseInstance = () => {
 const bootStrap = async () => {
     await startUpAndReturnDynamo();
     createDynamooseInstance();
-    const badCat = await createAndGetCat();
-    console.log('Never trust a smiling cat. - ' + badCat.name);
+    // const badCat = await createAndGetCat();
+    // console.log('Never trust a smiling cat. - ' + badCat.name);
 };
 
 bootStrap().then();
+
+// Routes
+const signUpRoutes = require('./routes/signup');
+
 
 const app = express();
 
@@ -49,5 +53,6 @@ app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.use('/api/v1/signup', signUpRoutes);
 
 module.exports = app;
