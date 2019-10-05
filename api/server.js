@@ -3,8 +3,10 @@ const cluster   = require('cluster');
 const app       = require('./src/app');
 const http      = require('http');
 const path      = require('path');
-require('dotenv').config({path: path.resolve('./.env')});
+require('dotenv').config({path: path.resolve('./src/config/.env')});
 const logger = require('./src/config/logger');
+
+
 
 const normalizePort = val =>
 {

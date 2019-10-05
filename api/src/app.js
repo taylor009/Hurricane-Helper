@@ -1,6 +1,6 @@
 'use strict';
 const path = require('path');
-require('dotenv').config({path: path.resolve('./.env')});
+require('dotenv').config({path: path.resolve('./config/.env')});
 const express    = require('express');
 const AWS        = require('aws-sdk');
 const dynamoose  = require('dynamoose');
