@@ -10,6 +10,7 @@
     "coverage": "cross-env NODE_ENV=development nyc --reporter=text yarn api/test"
   },
   "dependencies": {
+    "argon2": "^0.25.0",
     "aws-sdk": "^2.543.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.1.0",
@@ -18,7 +19,6 @@
     "express": "^4.17.1",
     "helmet": "^3.21.1",
     "morgan": "^1.9.1",
-    "sticky-session": "^1.1.2",
     "uuid": "^3.3.3",
     "winston": "^3.2.1"
   },
