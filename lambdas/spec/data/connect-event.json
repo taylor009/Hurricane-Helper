@@ -1,0 +1,47 @@
+{
+    "Details": {
+        "ContactData": {
+            "Attributes": {
+                "CallType": "Other",
+                "CustomerJourney": "CallStart | Other | OtherAuthStart | PolicyNumberInput | PolicyNumberInput | DOBInput",
+                "FR_GetDOB": "07031776",
+                "FR_Policy": "",
+                "dob": "1776-07-04",
+                "flowName": "MAIN_ENTRY",
+                "policyNumber": "0220701246"
+            },
+            "Channel": "VOICE",
+            "ContactId": "051565f9-ec80-4447-859b-7f7ff4eee35f",
+            "CustomerEndpoint": {
+                "Address": "+19729217400",
+                "Type": "TELEPHONE_NUMBER"
+            },
+            "InitialContactId": "051565f9-ec80-4447-859b-7f7ff4eee35f",
+            "InitiationMethod": "INBOUND",
+            "InstanceARN": "arn:aws:connect:us-east-1:813837579429:instance/ba7f698b-3a2e-4087-87f1-a82ef6072f85",
+            "MediaStreams": {
+                "Customer": {
+                    "Audio": null
+                }
+            },
+            "PreviousContactId": "051565f9-ec80-4447-859b-7f7ff4eee35f",
+            "Queue": {
+                "ARN": "arn:aws:connect:us-east-1:813837579429:instance/ba7f698b-3a2e-4087-87f1-a82ef6072f85/queue/968fa8ed-30c1-4245-9820-7b90a5cb4d48",
+                "Name": "Domestic Representative",
+                "OutboundCallerId": {
+                    "Address": "+18668554678",
+                    "Type": "TELEPHONE_NUMBER"
+                }
+            },
+            "SystemEndpoint": {
+                "Address": "+18668554678",
+                "Type": "TELEPHONE_NUMBER"
+            }
+        },
+        "Parameters": {
+            "DOB": "1776-07-04",
+            "POLICY_NUM": "0220701246"
+        }
+    },
+    "Name": "ContactFlowEvent"
+}

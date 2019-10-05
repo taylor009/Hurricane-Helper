@@ -1,0 +1,18 @@
+{ 
+  "compilerOptions": { 
+    "experimentalDecorators": true, 
+    "emitDecoratorMetadata": true, 
+    "lib": [ 
+      "es2017" 
+    ], 
+    "moduleResolution": "node", 
+    "noUnusedLocals": false, 
+    "noUnusedParameters": false, 
+    "sourceMap": true, 
+    "target": "es2017", 
+    "outDir": "lib", 
+  }, 
+  "exclude": [ 
+    "node_modules" 
+  ] 
+}

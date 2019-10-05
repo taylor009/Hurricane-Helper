@@ -1,0 +1,67 @@
+service:
+  name: hurricane-helper-lambdas
+
+plugins:
+  - serverless-webpack
+
+# Getting config vars from files here to keep rest of the file cleaner
+custom:
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  deploymentBucket: ${file(./config.${self:custom.stage}.json):deploymentBucket}
+  accountId: ${file(./config.${self:custom.stage}.json):accountId}
+  connectInstanceId: ${file(./config.${self:custom.stage}.json):connectInstanceId}
+  apiBaseUrl: ${file(./config.${self:custom.stage}.json):apiBaseUrl}
+  dataTable: ${file(./config.${self:custom.stage}.json):dataTable}
+
+provider:
+  name: aws
+  stage: ${self:custom.stage}
+  runtime: nodejs8.10
+  region: ${self:custom.region}
+  deploymentBucket:
+    name: ${self:custom.deploymentBucket}
+  tracing: 
+    lambda: true 
+  memorySize: 256
+  environment:
+    LOG_LEVEL: debug
+    API_BASE_URL: ${self:custom.apiBaseUrl}
+    DATA_TABLE: ${self:custom.dataTable}
+  stackTags:
+    Client: hackathon
+    Project: ${self:service.name}
+    Environment: ${self:custom.stage}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Scan
+        - dynamodb:Query
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+      Resource: "*"
+
+functions:
+  integrationTest:
+    handler: src/lambda/index.integrationTest
+    description: Tests IOC and db calls
+  dataApi:
+    name: hh-data-${self:custom.stage}
+    handler: src/lambda/index.dataApiLambda
+    description: Retrieves user data based on ANI
+    tags:
+      environment: ${self:custom.stage}
+
+resources:
+  Resources:
+    ConnectDataApiPermission: 
+      Type: AWS::Lambda::Permission 
+      Properties:  
+        Action: lambda:InvokeFunction 
+        FunctionName: 
+          Ref: DataApiLambdaFunction 
+        Principal: connect.amazonaws.com 
+        SourceAccount: ${self:custom.accountId} 
+        SourceArn: arn:aws:connect:${self:custom.region}:${self:custom.accountId}:instance/${self:custom.connectInstanceId} 
