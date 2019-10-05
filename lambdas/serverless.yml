@@ -21,8 +21,8 @@ provider:
   region: ${self:custom.region}
   deploymentBucket:
     name: ${self:custom.deploymentBucket}
-  tracing: 
-    lambda: true 
+  tracing:
+    lambda: true
   memorySize: 256
   environment:
     LOG_LEVEL: debug
@@ -56,12 +56,23 @@ functions:
 
 resources:
   Resources:
-    ConnectDataApiPermission: 
-      Type: AWS::Lambda::Permission 
-      Properties:  
-        Action: lambda:InvokeFunction 
-        FunctionName: 
-          Ref: DataApiLambdaFunction 
-        Principal: connect.amazonaws.com 
-        SourceAccount: ${self:custom.accountId} 
-        SourceArn: arn:aws:connect:${self:custom.region}:${self:custom.accountId}:instance/${self:custom.connectInstanceId} 
+    ConnectDataApiPermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        Action: lambda:InvokeFunction
+        FunctionName:
+          Ref: DataApiLambdaFunction
+        Principal: connect.amazonaws.com
+        SourceAccount: ${self:custom.accountId}
+        SourceArn: arn:aws:connect:${self:custom.region}:${self:custom.accountId}:instance/${self:custom.connectInstanceId}
+    DataTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.dataTable}
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: key
+            AttributeType: S
+        KeySchema:
+          - AttributeName: key
+            KeyType: HASH
