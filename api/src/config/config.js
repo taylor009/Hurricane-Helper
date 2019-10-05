@@ -24,6 +24,7 @@ const config = {
     EMAIL_PASSWORD: '',
     S3_ACCESS_ID  : 'key will be in .env',
     S3_SECRET_KEY : 'key_will be IN .env',
+
     BASE_URL      : 'localhost:300',
     DB_URL        : 'dynamo url',
     SMTP          : {
