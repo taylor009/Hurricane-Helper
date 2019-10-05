@@ -1,13 +1,35 @@
 # Hurricane-Helper
 
+## Web App Hosting
 
-# For Client ( Local Development )
+```bash
+cd web-stack
+./deploy-dev.sh
+```
 
-1. cd client
-2. npm i
-3. npm run serve
-4. open browser ( chrome.. really.. ) and visit localhost:8080
+## Client
 
-# For Client ( Deployment )
+### Local Development
+
+```bash
+cd client
+npm i
+npm run serve
+open browser ( chrome.. really.. ) and visit localhost:8080
+```
+
+### Client Deployment
 
 1. coming soon..
+
+## Lambdas
+
+Typescript code that executable by Amazon Connect. Using Serverless Framework.
+
+### Lambdas Deployment
+
+```bash
+cd lambdas
+npm i
+npm run deploy-dev
+```
