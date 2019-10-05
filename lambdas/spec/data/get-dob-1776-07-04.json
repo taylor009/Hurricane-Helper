@@ -1,0 +1,34 @@
+{
+    "messageVersion": "1.0",
+    "invocationSource": "FulfillmentCodeHook",
+    "userId": "6e19ffc7-38f8-48ec-92d0-d0403f993ff9",
+    "sessionAttributes": {},
+    "requestAttributes": {
+        "x-amz-lex:accept-content-types": "PlainText,SSML"
+    },
+    "bot": {
+        "name": "FR_GetDOB",
+        "alias": "$LATEST",
+        "version": "$LATEST"
+    },
+    "outputDialogMode": "Text",
+    "currentIntent": {
+        "name": "FR_GetDOB",
+        "slots": {
+            "dob": "1776-07-04",
+            "dobDTMF": null
+        },
+        "slotDetails": {
+            "dob": {
+                "resolutions": [],
+                "originalValue": null
+            },
+            "dobDTMF": {
+                "resolutions": [],
+                "originalValue": null
+            }
+        },
+        "confirmationStatus": "None"
+    },
+    "inputTranscript": "july fourth seventeen seventy six"
+}
