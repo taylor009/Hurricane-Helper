@@ -1,0 +1,134 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: >
+  Stored the Shopify app for aws-dialer project
+
+Parameters:
+
+  Client:
+    Type: String
+
+  Project:
+    Type: String
+
+  Environment:
+    Type: String
+
+  DefaultTtl:
+    Type: Number
+    Default: 300
+    Description: CloudFront TTL
+
+  MinTtl:
+    Type: Number
+    Default: 60
+    Description: CloudFront TTL
+
+  MaxTtl:
+    Type: Number
+    Default: 3600
+    Description: CloudFront TTL
+
+Resources:
+
+  AppBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${Project}-${Environment}"
+      AccessControl: PublicRead
+      # PublicAccessBlockConfiguration:
+      #   BlockPublicAcls: true
+      #   BlockPublicPolicy: true
+      #   IgnorePublicAcls: true
+      #   RestrictPublicBuckets: true
+      WebsiteConfiguration:
+        IndexDocument: index.html
+      Tags:
+        - Key: Client
+          Value: !Ref Client
+        - Key: Project
+          Value: !Ref Project
+        - Key: Environment
+          Value: !Ref Environment
+
+  # AppBucketPolicy:
+  #   Type: AWS::S3::BucketPolicy
+  #   Properties:
+  #     PolicyDocument:
+  #       Id: WebAppBucketPolicy
+  #       Version: 2012-10-17
+  #       Statement:
+  #         - Sid: "Grant a CloudFront Origin Identity access to support private content"
+  #           Effect: Allow
+  #           Principal:
+  #             CanonicalUser: !GetAtt OriginAccessIdentity.S3CanonicalUserId
+  #           Action: s3:GetObject
+  #           Resource: !Sub "${AppBucket.Arn}/*"
+  #     Bucket: !Ref AppBucket
+
+  # OriginAccessIdentity:
+  #   Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+  #   Properties:
+  #     CloudFrontOriginAccessIdentityConfig:
+  #       Comment: !Sub "${Client}, ${Project}, ${Environment}"
+
+  # AppDistribution:
+  #   Type: AWS::CloudFront::Distribution
+  #   # DependsOn: LambdaEdgeFunction
+  #   Properties:
+  #     DistributionConfig: 
+  #       Origins:
+  #       - DomainName: !Sub ${AppBucket}.s3.amazonaws.com
+  #         Id: myS3Origin
+  #         S3OriginConfig:
+  #           OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${OriginAccessIdentity}
+  #       Enabled: 'true'
+  #       Comment: !Sub "${Client}, ${Project}, ${Environment}"
+  #       CustomErrorResponses:
+  #       - ErrorCachingMinTTL: 604800                                 #One week - 403s should always go to the index
+  #         ErrorCode: 403
+  #         ResponseCode: 200
+  #         ResponsePagePath: /index.html
+  #       - ErrorCachingMinTTL: 604800                                 #One week - 404s should always go to the index
+  #         ErrorCode: 404
+  #         ResponseCode: 200
+  #         ResponsePagePath: /index.html
+  #       DefaultRootObject: index.html
+  #       Aliases:
+  #       - !Ref AppUrl
+  #       DefaultCacheBehavior:
+  #         AllowedMethods:
+  #           - GET
+  #           - HEAD
+  #           - OPTIONS
+  #         Compress: 'true'
+  #         TargetOriginId: myS3Origin
+  #         ForwardedValues:
+  #           QueryString: 'false'
+  #           Cookies:
+  #             Forward: none
+  #         ViewerProtocolPolicy: redirect-to-https
+  #         DefaultTTL: !Ref DefaultTtl
+  #         MinTTL: !Ref MinTtl
+  #         MaxTTL: !Ref MaxTtl
+  #       PriceClass: PriceClass_100
+  #       ViewerCertificate:
+  #         AcmCertificateArn: !Ref AcmCertArn
+  #         SslSupportMethod: sni-only
+  #     Tags:
+  #       - Key: Client
+  #         Value: !Ref Client
+  #       - Key: Project
+  #         Value: !Ref Project
+  #       - Key: Environment
+  #         Value: !Ref Environment
+
+# Outputs:
+  # CloudFrontURL:
+  #   Value: !Join 
+  #     - ''
+  #     - - 'https://'
+  #       - !GetAtt 
+  #         - AppDistribution
+  #         - DomainName
+  #   Description: URL for website CDN
