@@ -1,16 +1,42 @@
 # Hurricane-Helper
 
+## Web App Hosting
 
-# For Client ( Local Development )
+```bash
+cd web-stack
+./deploy-dev.sh
+```
 
-1. cd client ( or just make sure you're in that directory )
-2. npm i
-3. npm run serve
-4. open browser ( chrome.. really.. ) and visit localhost:8080
+## Client
 
-# For Client ( Deployment )
+VueJS Single Page Application using Amazon Connect Streams API
 
-1. cd client ( or just make sure you're in that directory )
-2. npm run deploy
-    - this will run a prod. build
-    - then this will run our .sh script for deployment to aws
+### Local Development
+
+```bash
+cd client
+npm i
+npm run serve
+```
+
+open browser ( chrome.. really.. ) and visit localhost:8080
+
+### Client Deployment
+
+This script will run a prod build and copy the code to AWS
+
+```bash
+npm run deploy
+```
+
+## Lambdas
+
+Typescript code that executable by Amazon Connect. Using Serverless Framework.
+
+### Lambdas Deployment
+
+```bash
+cd lambdas
+npm i
+npm run deploy-dev
+```
