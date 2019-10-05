@@ -2,7 +2,7 @@
 
   <div class="home">
 
-    test this hellos world
+    <h1>This is the Home Page</h1>
   </div>
 </template>
 
