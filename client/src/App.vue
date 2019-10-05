@@ -2,7 +2,10 @@
   <div id="app">
     <navbar-comp style="height: 75px" />
 
-    <router-view style="padding-top: 75px; padding-bottom: 95px; height: 100vh" />
+    <keep-alive>
+
+      <router-view style="padding-top: 75px; padding-bottom: 95px; height: 100vh" />
+    </keep-alive>
 
     <footer-comp style="height: 95px" />
   </div>
