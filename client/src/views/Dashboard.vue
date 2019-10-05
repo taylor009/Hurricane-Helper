@@ -2,18 +2,18 @@
 
     <b-container>
 
-      <b-row class="h-100 d-flex align-items-center justify-content-center">
+        <b-row class="h-100 d-flex align-items-center justify-content-center">
 
-        <b-col>
+            <b-col>
 
-          <div id="containerDiv"><!--Amazon CCP will go here--></div>
+                <div id="containerDiv"><!--Amazon CCP will go here--></div>
 
-        </b-col>
-        <b-col class="">
+            </b-col>
+            <b-col class="">
 
-            <form-example />
-        </b-col>
-      </b-row>
+                <form-example />
+            </b-col>
+        </b-row>
     </b-container>
 </template>
 
@@ -25,19 +25,25 @@
 
         data: () => ({
 
+            mounted : false,
             ccpUrl: "https://pbt-hackathon.awsapps.com/connect/ccp#", //replace with the CCP URL for your Amazon Connect instance
         }),
         mounted(){
 
-            connect.core.initCCP( containerDiv, {
+            if( !this.mounted ){
 
-                ccpUrl     : this.ccpUrl,
-                loginPopup : true,
-                softphone  : {
+                connect.core.initCCP( containerDiv, {
 
-                    allowFramedSoftphone: true
-                }
-            });
+                    ccpUrl     : this.ccpUrl,
+                    loginPopup : true,
+                    softphone  : {
+
+                        allowFramedSoftphone: true
+                    }
+                });
+
+                this.mounted = true;
+            }
         },
         components : {
 
