@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+
   state: {
 
   },
@@ -11,6 +12,13 @@ export default new Vuex.Store({
 
   },
   actions: {
+
+    saveAgent( context, agent ){
+
+      console.log( 'saving agent: ', agent );
+    }
+  },
+  getters: {
 
   }
 })
