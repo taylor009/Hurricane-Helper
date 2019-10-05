@@ -4,35 +4,47 @@
 
         <b-row class="mt-4">
 
-            <b-col lg="4" sm="12" class="my-1 d-flex justify-content-center">
+            <b-col lg="4" class="my-2 d-flex justify-content-center">
 
                 <div id="containerDiv"><!--Amazon CCP will go here--></div>
 
             </b-col>
-            <b-col lg="4" sm="6" class="my-1">
+            <b-col lg="8" class="my-2">
 
-                <b-card header="Log Messages">
+                <b-card no-body>
 
-                    <b-list-group class="list-group">
+                    <b-tabs card class="tabs-group">
 
-                        <b-list-group-item v-for=" ( msg, i ) in logMessages " :key=" i ">
+                        <b-tab title="Current Call" active>
 
-                            {{ msg }}
-                        </b-list-group-item>
-                    </b-list-group>
-                </b-card>
-            </b-col>
-            <b-col lg="4" sm="6" class="my-1">
+                        </b-tab>
+                        <b-tab title="Directory">
 
-                <b-card header="Event Messages">
+                        </b-tab>
+                        <b-tab title="Call History">
 
-                    <b-list-group class="list-group">
+                        </b-tab>
+                        <b-tab title="Status Log">
 
-                        <b-list-group-item v-for=" ( msg, j ) in eventMessages " :key=" j ">
+                            <b-list-group class="list-group">
 
-                            {{ msg }}
-                        </b-list-group-item>
-                    </b-list-group>
+                                <b-list-group-item v-for=" ( msg, i ) in logMessages " :key=" i ">
+
+                                    {{ msg }}
+                                </b-list-group-item>
+                            </b-list-group>
+                        </b-tab>
+                        <b-tab title="Event Log">
+
+                            <b-list-group class="list-group">
+
+                                <b-list-group-item v-for=" ( msg, j ) in eventMessages " :key=" j ">
+
+                                    {{ msg }}
+                                </b-list-group-item>
+                            </b-list-group>
+                        </b-tab>
+                    </b-tabs>
                 </b-card>
             </b-col>
         </b-row>
@@ -43,6 +55,10 @@
 
     import FormExample from '../components/Forms/ExampleForm';
     import AwsConnect from '../mixins/aws-connect';
+
+    /**
+     * {"ADDRESS":{"name":"ADDRESS","value":"Home Depot Hackathon, Boca Raton, FL 33487"},"FIRST_NAME":{"name":"FIRST_NAME","value":"Alex"},"FOUND":{"name":"FOUND","value":"true"},"HAS_PROMPT":{"name":"HAS_PROMPT","value":"true"},"LANGUAGE":{"name":"LANGUAGE","value":"EN"},"LAST_NAME":{"name":"LAST_NAME","value":"Ciccolella"},"PROMPT":{"name":"PROMPT","value":"Your address on Home Depot Hackathon has recently been cleared of Hurricane warning status."}}
+     */
 
     export default {
 
@@ -68,5 +84,10 @@
         min-width  : 320px;
         height     : 470px;
         min-height : 470px;
+    }
+
+    .tabs-group {
+
+        height: 100%;
     }
 </style>

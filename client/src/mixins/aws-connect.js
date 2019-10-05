@@ -1,3 +1,6 @@
+
+import { mapActions } from 'vuex';
+
 export default {
 
     data: () => ({
@@ -31,6 +34,11 @@ export default {
         }
     },
     methods: {
+
+        ...mapActions({
+
+            saveAgent : 'saveAgent'
+        }),
 
         subscribeToContactEvents(contact) {
 
@@ -95,6 +103,9 @@ export default {
         subscribeToAgentEvents(agent) {
 
             console.log( 'subscribing agent: ', agent );
+
+            // save the agent details here
+            this.saveAgent( agent );
 
             this.logInfoMsg("Subscribing to events for agent " + agent.getName());
             this.logInfoMsg("Agent is currently in status of " + agent.getStatus().name);
