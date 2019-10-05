@@ -14,7 +14,7 @@ export class EnvConfigService {
     public getTimeZone(): string {
         return process.env.TIME_ZONE;
     }
-    public getHolidayTableName(): string {
-        return process.env.HOLIDAY_TABLE;
+    public getDataTableName(): string {
+        return process.env.DATA_TABLE;
     }
 }
