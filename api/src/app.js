@@ -5,7 +5,6 @@ const helmet     = require('helmet');
 const bodyParser = require('body-parser');
 const logger     = require('./config/logger');
 
-
 const app = express();
 
 
