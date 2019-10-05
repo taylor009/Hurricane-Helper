@@ -10,6 +10,7 @@
 
             <!--Amazon CCP will go here-->
           </div>
+
         </b-col>
         <b-col>
 
