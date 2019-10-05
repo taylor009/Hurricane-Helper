@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .home {
-  margin: 2.5%;
+  padding: 2.5%;
   /* height: 500px; */
   height: 100%;
 }
