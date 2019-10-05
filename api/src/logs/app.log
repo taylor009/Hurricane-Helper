@@ -126,3 +126,159 @@ TypeError: Router.use() requires a middleware function but got a Object
     at Module.load (internal/modules/cjs/loader.js:653:32)
     at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+19-10-05 15:10:54  info : Master cluster setting up 12 workers...
+19-10-05 15:10:54  info : Master cluster setting up 12 workers...
+19-10-05 15:10:68  info : Worker 13196 is online
+19-10-05 15:10:69  info : Worker 18808 is online
+19-10-05 15:10:71  info : Worker 21192 is online
+19-10-05 15:10:72  info : Worker 18844 is online
+19-10-05 15:10:73  info : Worker 1328 is online
+19-10-05 15:10:74  info : Worker 16388 is online
+19-10-05 15:10:74  info : Worker 18828 is online
+19-10-05 15:10:75  info : Worker 10480 is online
+19-10-05 15:10:78  info : Worker 13192 is online
+19-10-05 15:10:78  info : Worker 22008 is online
+19-10-05 15:10:79  info : Worker 14104 is online
+19-10-05 15:10:82  info : Worker 4268 is online
+19-10-05 15:10:40  info : server is listening on port: port 3000
+19-10-05 15:10:41  info : server is listening on port: port 3000
+19-10-05 15:10:42  info : server is listening on port: port 3000
+19-10-05 15:10:42  info : server is listening on port: port 3000
+19-10-05 15:10:43  info : server is listening on port: port 3000
+19-10-05 15:10:43  info : server is listening on port: port 3000
+19-10-05 15:10:47  info : server is listening on port: port 3000
+19-10-05 15:10:47  info : server is listening on port: port 3000
+19-10-05 15:10:48  info : server is listening on port: port 3000
+19-10-05 15:10:48  info : server is listening on port: port 3000
+19-10-05 15:10:48  info : server is listening on port: port 3000
+19-10-05 15:10:48  info : server is listening on port: port 3000
+19-10-05 15:10:88  info : Master cluster setting up 12 workers...
+19-10-05 15:10:89  info : Master cluster setting up 12 workers...
+19-10-05 15:10:02  info : Worker 11232 is online
+19-10-05 15:10:05  info : Worker 9052 is online
+19-10-05 15:10:05  info : Worker 17876 is online
+19-10-05 15:10:06  info : Worker 20364 is online
+19-10-05 15:10:07  info : Worker 19784 is online
+19-10-05 15:10:09  info : Worker 116 is online
+19-10-05 15:10:10  info : Worker 16428 is online
+19-10-05 15:10:10  info : Worker 9136 is online
+19-10-05 15:10:12  info : Worker 17228 is online
+19-10-05 15:10:13  info : Worker 10828 is online
+19-10-05 15:10:14  info : Worker 20896 is online
+19-10-05 15:10:15  info : Worker 17200 is online
+19-10-05 15:10:73  info : server is listening on port: port 3000
+19-10-05 15:10:73  info : server is listening on port: port 3000
+19-10-05 15:10:73  info : server is listening on port: port 3000
+19-10-05 15:10:75  info : server is listening on port: port 3000
+19-10-05 15:10:76  info : server is listening on port: port 3000
+19-10-05 15:10:76  info : server is listening on port: port 3000
+19-10-05 15:10:77  info : server is listening on port: port 3000
+19-10-05 15:10:77  info : server is listening on port: port 3000
+19-10-05 15:10:79  info : server is listening on port: port 3000
+19-10-05 15:10:79  info : server is listening on port: port 3000
+19-10-05 15:10:80  info : server is listening on port: port 3000
+19-10-05 15:10:80  info : server is listening on port: port 3000
+19-10-05 15:10:53  info : Master cluster setting up 12 workers...
+19-10-05 15:10:54  info : Master cluster setting up 12 workers...
+19-10-05 15:10:68  info : Worker 20096 is online
+19-10-05 15:10:68  info : Worker 20360 is online
+19-10-05 15:10:70  info : Worker 14148 is online
+19-10-05 15:10:71  info : Worker 6184 is online
+19-10-05 15:10:72  info : Worker 19376 is online
+19-10-05 15:10:72  info : Worker 18540 is online
+19-10-05 15:10:74  info : Worker 7932 is online
+19-10-05 15:10:75  info : Worker 15560 is online
+19-10-05 15:10:78  info : Worker 10492 is online
+19-10-05 15:10:78  info : Worker 14184 is online
+19-10-05 15:10:78  info : Worker 15020 is online
+19-10-05 15:10:80  info : Worker 15988 is online
+19-10-05 15:10:43  info : server is listening on port: port 3000
+19-10-05 15:10:46  info : server is listening on port: port 3000
+19-10-05 15:10:47  info : server is listening on port: port 3000
+19-10-05 15:10:48  info : server is listening on port: port 3000
+19-10-05 15:10:49  info : server is listening on port: port 3000
+19-10-05 15:10:49  info : server is listening on port: port 3000
+19-10-05 15:10:51  info : server is listening on port: port 3000
+19-10-05 15:10:53  info : server is listening on port: port 3000
+19-10-05 15:10:54  info : server is listening on port: port 3000
+19-10-05 15:10:54  info : server is listening on port: port 3000
+19-10-05 15:10:56  info : server is listening on port: port 3000
+19-10-05 15:10:56  info : server is listening on port: port 3000
+19-10-05 15:10:45  info : Master cluster setting up 12 workers...
+19-10-05 15:10:45  info : Master cluster setting up 12 workers...
+19-10-05 15:10:58  info : Worker 21524 is online
+19-10-05 15:10:59  info : Worker 9460 is online
+19-10-05 15:10:61  info : Worker 10680 is online
+19-10-05 15:10:62  info : Worker 11764 is online
+19-10-05 15:10:63  info : Worker 4640 is online
+19-10-05 15:10:64  info : Worker 6308 is online
+19-10-05 15:10:65  info : Worker 20348 is online
+19-10-05 15:10:66  info : Worker 15636 is online
+19-10-05 15:10:68  info : Worker 20848 is online
+19-10-05 15:10:69  info : Worker 6488 is online
+19-10-05 15:10:70  info : Worker 11740 is online
+19-10-05 15:10:73  info : Worker 15052 is online
+19-10-05 15:10:28  info : server is listening on port: port 3000
+19-10-05 15:10:28  info : server is listening on port: port 3000
+19-10-05 15:10:29  info : server is listening on port: port 3000
+19-10-05 15:10:29  info : server is listening on port: port 3000
+19-10-05 15:10:29  info : server is listening on port: port 3000
+19-10-05 15:10:31  info : server is listening on port: port 3000
+19-10-05 15:10:32  info : server is listening on port: port 3000
+19-10-05 15:10:32  info : server is listening on port: port 3000
+19-10-05 15:10:32  info : server is listening on port: port 3000
+19-10-05 15:10:33  info : server is listening on port: port 3000
+19-10-05 15:10:34  info : server is listening on port: port 3000
+19-10-05 15:10:35  info : server is listening on port: port 3000
+19-10-05 16:10:24  info : Master cluster setting up 12 workers...
+19-10-05 16:10:24  info : Master cluster setting up 12 workers...
+19-10-05 16:10:37  info : Worker 14148 is online
+19-10-05 16:10:39  info : Worker 10492 is online
+19-10-05 16:10:39  info : Worker 14184 is online
+19-10-05 16:10:40  info : Worker 6520 is online
+19-10-05 16:10:40  info : Worker 11624 is online
+19-10-05 16:10:43  info : Worker 10784 is online
+19-10-05 16:10:43  info : Worker 20896 is online
+19-10-05 16:10:44  info : Worker 15664 is online
+19-10-05 16:10:46  info : Worker 19228 is online
+19-10-05 16:10:46  info : Worker 21780 is online
+19-10-05 16:10:47  info : Worker 8304 is online
+19-10-05 16:10:49  info : Worker 17996 is online
+19-10-05 16:10:12  info : server is listening on port: port 3000
+19-10-05 16:10:14  info : server is listening on port: port 3000
+19-10-05 16:10:14  info : server is listening on port: port 3000
+19-10-05 16:10:15  info : server is listening on port: port 3000
+19-10-05 16:10:17  info : server is listening on port: port 3000
+19-10-05 16:10:18  info : server is listening on port: port 3000
+19-10-05 16:10:21  info : server is listening on port: port 3000
+19-10-05 16:10:21  info : server is listening on port: port 3000
+19-10-05 16:10:21  info : server is listening on port: port 3000
+19-10-05 16:10:21  info : server is listening on port: port 3000
+19-10-05 16:10:22  info : server is listening on port: port 3000
+19-10-05 16:10:22  info : server is listening on port: port 3000
+19-10-05 16:10:16  info : Master cluster setting up 12 workers...
+19-10-05 16:10:17  info : Master cluster setting up 12 workers...
+19-10-05 16:10:30  info : Worker 7920 is online
+19-10-05 16:10:30  info : Worker 19556 is online
+19-10-05 16:10:31  info : Worker 19340 is online
+19-10-05 16:10:32  info : Worker 1512 is online
+19-10-05 16:10:33  info : Worker 19788 is online
+19-10-05 16:10:34  info : Worker 22316 is online
+19-10-05 16:10:34  info : Worker 21152 is online
+19-10-05 16:10:36  info : Worker 10860 is online
+19-10-05 16:10:37  info : Worker 12784 is online
+19-10-05 16:10:38  info : Worker 13232 is online
+19-10-05 16:10:40  info : Worker 3076 is online
+19-10-05 16:10:41  info : Worker 14652 is online
+19-10-05 16:10:05  info : server is listening on port: port 3000
+19-10-05 16:10:05  info : server is listening on port: port 3000
+19-10-05 16:10:07  info : server is listening on port: port 3000
+19-10-05 16:10:08  info : server is listening on port: port 3000
+19-10-05 16:10:09  info : server is listening on port: port 3000
+19-10-05 16:10:10  info : server is listening on port: port 3000
+19-10-05 16:10:11  info : server is listening on port: port 3000
+19-10-05 16:10:12  info : server is listening on port: port 3000
+19-10-05 16:10:13  info : server is listening on port: port 3000
+19-10-05 16:10:14  info : server is listening on port: port 3000
+19-10-05 16:10:15  info : server is listening on port: port 3000
+19-10-05 16:10:16  info : server is listening on port: port 3000
