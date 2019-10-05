@@ -1,0 +1,24 @@
+19-10-05 15:10:20  error : uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\router\index.js:458:13)
+    at Function.<anonymous> (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\application.js:220:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\application.js:217:7)
+    at Object.<anonymous> (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\src\app.js:17:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+19-10-05 15:10:82  error : uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\router\index.js:458:13)
+    at Function.<anonymous> (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\application.js:220:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\application.js:217:7)
+    at Object.<anonymous> (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\src\app.js:17:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)

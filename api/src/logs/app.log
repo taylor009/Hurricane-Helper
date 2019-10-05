@@ -1,0 +1,128 @@
+19-10-05 14:10:15  info : Master cluster setting up 12 workers...
+19-10-05 14:10:16  info : Master cluster setting up 12 workers...
+19-10-05 14:10:30  info : Worker 11488 is online
+19-10-05 14:10:30  info : Worker 5124 is online
+19-10-05 14:10:31  info : Worker 508 is online
+19-10-05 14:10:32  info : Worker 14964 is online
+19-10-05 14:10:33  info : Worker 18176 is online
+19-10-05 14:10:34  info : Worker 21904 is online
+19-10-05 14:10:35  info : Worker 6584 is online
+19-10-05 14:10:36  info : Worker 13988 is online
+19-10-05 14:10:39  info : Worker 12204 is online
+19-10-05 14:10:39  info : Worker 4184 is online
+19-10-05 14:10:40  info : Worker 13936 is online
+19-10-05 14:10:44  info : Worker 13984 is online
+19-10-05 14:10:98  info : server is listening on port: port 3000
+19-10-05 14:10:98  info : server is listening on port: port 3000
+19-10-05 14:10:01  info : server is listening on port: port 3000
+19-10-05 14:10:02  info : server is listening on port: port 3000
+19-10-05 14:10:02  info : server is listening on port: port 3000
+19-10-05 14:10:03  info : server is listening on port: port 3000
+19-10-05 14:10:03  info : server is listening on port: port 3000
+19-10-05 14:10:06  info : server is listening on port: port 3000
+19-10-05 14:10:06  info : server is listening on port: port 3000
+19-10-05 14:10:06  info : server is listening on port: port 3000
+19-10-05 14:10:08  info : server is listening on port: port 3000
+19-10-05 14:10:09  info : server is listening on port: port 3000
+19-10-05 15:10:17  info : Master cluster setting up 12 workers...
+19-10-05 15:10:17  info : Master cluster setting up 12 workers...
+19-10-05 15:10:31  info : Worker 19828 is online
+19-10-05 15:10:32  info : Worker 7092 is online
+19-10-05 15:10:32  info : Worker 12988 is online
+19-10-05 15:10:34  info : Worker 19788 is online
+19-10-05 15:10:34  info : Worker 780 is online
+19-10-05 15:10:37  info : Worker 7848 is online
+19-10-05 15:10:37  info : Worker 11208 is online
+19-10-05 15:10:38  info : Worker 4644 is online
+19-10-05 15:10:39  info : Worker 12428 is online
+19-10-05 15:10:42  info : Worker 17152 is online
+19-10-05 15:10:42  info : Worker 7640 is online
+19-10-05 15:10:43  info : Worker 22320 is online
+19-10-05 15:10:98  info : server is listening on port: port 3000
+19-10-05 15:10:99  info : server is listening on port: port 3000
+19-10-05 15:10:99  info : server is listening on port: port 3000
+19-10-05 15:10:100  info : server is listening on port: port 3000
+19-10-05 15:10:01  info : server is listening on port: port 3000
+19-10-05 15:10:02  info : server is listening on port: port 3000
+19-10-05 15:10:03  info : server is listening on port: port 3000
+19-10-05 15:10:03  info : server is listening on port: port 3000
+19-10-05 15:10:05  info : server is listening on port: port 3000
+19-10-05 15:10:05  info : server is listening on port: port 3000
+19-10-05 15:10:05  info : server is listening on port: port 3000
+19-10-05 15:10:06  info : server is listening on port: port 3000
+19-10-05 15:10:87  info : Master cluster setting up 12 workers...
+19-10-05 15:10:88  info : Master cluster setting up 12 workers...
+19-10-05 15:10:02  info : Worker 3380 is online
+19-10-05 15:10:02  info : Worker 21920 is online
+19-10-05 15:10:03  info : Worker 22128 is online
+19-10-05 15:10:05  info : Worker 19968 is online
+19-10-05 15:10:06  info : Worker 19244 is online
+19-10-05 15:10:06  info : Worker 1956 is online
+19-10-05 15:10:07  info : Worker 20016 is online
+19-10-05 15:10:07  info : Worker 15080 is online
+19-10-05 15:10:08  info : Worker 14864 is online
+19-10-05 15:10:11  info : Worker 6776 is online
+19-10-05 15:10:11  info : Worker 916 is online
+19-10-05 15:10:14  info : Worker 16616 is online
+19-10-05 15:10:67  info : server is listening on port: port 3000
+19-10-05 15:10:67  info : server is listening on port: port 3000
+19-10-05 15:10:68  info : server is listening on port: port 3000
+19-10-05 15:10:69  info : server is listening on port: port 3000
+19-10-05 15:10:69  info : server is listening on port: port 3000
+19-10-05 15:10:70  info : server is listening on port: port 3000
+19-10-05 15:10:70  info : server is listening on port: port 3000
+19-10-05 15:10:71  info : server is listening on port: port 3000
+19-10-05 15:10:71  info : server is listening on port: port 3000
+19-10-05 15:10:72  info : server is listening on port: port 3000
+19-10-05 15:10:72  info : server is listening on port: port 3000
+19-10-05 15:10:74  info : server is listening on port: port 3000
+19-10-05 15:10:88  info : Master cluster setting up 12 workers...
+19-10-05 15:10:88  info : Master cluster setting up 12 workers...
+19-10-05 15:10:03  info : Worker 14228 is online
+19-10-05 15:10:03  info : Worker 14932 is online
+19-10-05 15:10:03  info : Worker 10024 is online
+19-10-05 15:10:06  info : Worker 12620 is online
+19-10-05 15:10:06  info : Worker 15620 is online
+19-10-05 15:10:07  info : Worker 11420 is online
+19-10-05 15:10:08  info : Worker 21976 is online
+19-10-05 15:10:09  info : Worker 14800 is online
+19-10-05 15:10:12  info : Worker 4924 is online
+19-10-05 15:10:13  info : Worker 5124 is online
+19-10-05 15:10:14  info : Worker 19140 is online
+19-10-05 15:10:18  info : Worker 18872 is online
+19-10-05 15:10:73  info : server is listening on port: port 3000
+19-10-05 15:10:74  info : server is listening on port: port 3000
+19-10-05 15:10:76  info : server is listening on port: port 3000
+19-10-05 15:10:77  info : server is listening on port: port 3000
+19-10-05 15:10:78  info : server is listening on port: port 3000
+19-10-05 15:10:78  info : server is listening on port: port 3000
+19-10-05 15:10:79  info : server is listening on port: port 3000
+19-10-05 15:10:79  info : server is listening on port: port 3000
+19-10-05 15:10:81  info : server is listening on port: port 3000
+19-10-05 15:10:81  info : server is listening on port: port 3000
+19-10-05 15:10:82  info : server is listening on port: port 3000
+19-10-05 15:10:83  info : server is listening on port: port 3000
+19-10-05 15:10:20  error : uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\router\index.js:458:13)
+    at Function.<anonymous> (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\application.js:220:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\application.js:217:7)
+    at Object.<anonymous> (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\src\app.js:17:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+19-10-05 15:10:82  error : uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\router\index.js:458:13)
+    at Function.<anonymous> (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\application.js:220:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\node_modules\express\lib\application.js:217:7)
+    at Object.<anonymous> (C:\Users\mtob1\OneDrive\Documents\hurricane-helper\Hurricane-Helper\api\src\app.js:17:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
