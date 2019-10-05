@@ -4,5 +4,5 @@
     "connectInstanceId" : "8441fb10-9621-4480-bd96-5e71c690dd1a",
     "deploymentBucket": "hackathon-serverless",
     "apiBaseUrl": "todo",
-    "dataTable": "todo"
+    "dataTable": "hackathon-data-dev"
 }
