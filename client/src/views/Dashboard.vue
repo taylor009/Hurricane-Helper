@@ -2,16 +2,38 @@
 
     <b-container>
 
-        <b-row class="h-100 d-flex align-items-center justify-content-center">
+        <b-row class="mt-4">
 
-            <b-col>
+            <b-col lg="4" sm="12" class="my-1 d-flex justify-content-center">
 
                 <div id="containerDiv"><!--Amazon CCP will go here--></div>
 
             </b-col>
-            <b-col class="">
+            <b-col lg="4" sm="6" class="my-1">
 
-                <form-example />
+                <b-card header="Log Messages">
+
+                    <b-list-group class="list-group">
+
+                        <b-list-group-item v-for=" ( msg, i ) in logMessages " :key=" i ">
+
+                            {{ msg }}
+                        </b-list-group-item>
+                    </b-list-group>
+                </b-card>
+            </b-col>
+            <b-col lg="4" sm="6" class="my-1">
+
+                <b-card header="Event Messages">
+
+                    <b-list-group class="list-group">
+
+                        <b-list-group-item v-for=" ( msg, j ) in eventMessages " :key=" j ">
+
+                            {{ msg }}
+                        </b-list-group-item>
+                    </b-list-group>
+                </b-card>
             </b-col>
         </b-row>
     </b-container>
@@ -20,31 +42,17 @@
 <script>
 
     import FormExample from '../components/Forms/ExampleForm';
+    import AwsConnect from '../mixins/aws-connect';
 
     export default {
 
         data: () => ({
 
-            mounted : false,
-            ccpUrl: "https://pbt-hackathon.awsapps.com/connect/ccp#", //replace with the CCP URL for your Amazon Connect instance
         }),
-        mounted(){
+        mixins : [
 
-            if( !this.mounted ){
-
-                connect.core.initCCP( containerDiv, {
-
-                    ccpUrl     : this.ccpUrl,
-                    loginPopup : true,
-                    softphone  : {
-
-                        allowFramedSoftphone: true
-                    }
-                });
-
-                this.mounted = true;
-            }
-        },
+            AwsConnect
+        ],
         components : {
 
             FormExample

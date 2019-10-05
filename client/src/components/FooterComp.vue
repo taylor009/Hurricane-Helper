@@ -2,7 +2,16 @@
 
   <footer>
 
-    testing footer lmao
+    <b-container>
+
+      <b-row>
+
+        <b-col>
+
+          testing footer lmao
+        </b-col>
+      </b-row>
+    </b-container>
   </footer>
 </template>
 
@@ -14,7 +23,7 @@ export default {};
 footer {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
