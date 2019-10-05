@@ -1,5 +1,9 @@
 <template>
-  <footer>testing footer lmao</footer>
+
+  <footer>
+
+    testing footer lmao
+  </footer>
 </template>
 
 <script>
