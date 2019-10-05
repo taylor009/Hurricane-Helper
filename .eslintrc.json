@@ -1,0 +1,41 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "google"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "no-multi-spaces": 0,
+        "no-mixed-spaces-and-tabs": 0,
+        "no-tabs": "off",
+        "brace-style": ["error", "allman", { "allowSingleLine": true }],
+        "strict": 2,
+        "indent": ["error", 4, {"VariableDeclarator":  4}],
+        "key-spacing": [2, { "align": "colon" }],
+        "camelcase": "off",
+        "max-len": ["error", { "code": 200 }],
+        "consistent-return": "off",
+        "new-cap": "off",
+        "guard-for-in": "off",
+        "arrow-parens": "off",
+        "require-jsdoc": ["error", {
+            "require": {
+                "FunctionDeclaration": true,
+                "MethodDefinition": false,
+                "ClassDeclaration": false,
+                "ArrowFunctionExpression": false,
+                "FunctionExpression": false
+            }
+        }]
+    }
+}
