@@ -18,7 +18,7 @@ export class DataApiLambda extends BaseLambda {
                 LAST_NAME: 'Grandma',
                 HAS_PROMPT: 'true',
                 LANGUAGE: 'EN',
-                ADDRESS: '6600 N Military TrlBoca Raton, FL 33487',
+                ADDRESS: '6600 N Military Trail, Boca Raton, FL 33487',
                 // tslint:disable-next-line: max-line-length
                 PROMPT: 'Hurricane Dorian is approaching your area. A mandatory evacuation is effective tomorrow at 2pm.',
             };
