@@ -123,9 +123,23 @@
 
             onSubmit(){
 
-                console.log( 'submitting lmao..', this.contact );
+                const formattedContact = {
 
-                const formattedContact = this.contact;
+                    "address" : {
+
+                        "city"  : "Boca Raton",
+                        "line1" : "1337 Glades Road",
+                        "state" : "FL",
+                        "zip"   : "33487"
+                    },
+                    "firstName" : this.contact.first,
+                    "key"       : this.contact.phone,
+                    "language"  : this.contact.language,
+                    "lastName"  : this.contact.last,
+                    "notes"     : this.contact.notes
+                };
+
+                console.log( 'submitting lmao..', formattedContact );
 
                 axios.post( 'https://g7kd6chmv2.execute-api.us-east-1.amazonaws.com/dev/users', formattedContact )
                     .then( res => {
@@ -148,7 +162,8 @@
                 this.contact.first    = clear ? '' : _.sample( this.firstNames );
                 this.contact.language = clear ? '' : 'EN';
                 this.contact.last     = clear ? '' : _.sample( this.lastNames );
-                this.contact.notes    = clear ? '' : 'These are sample notes from our interaction on the quick-spawn, low cost volunteer-driven telephony overflow system for municiple emergency response'
+                this.contact.notes    = clear ? '' : 'These are sample notes from our interaction on the quick-spawn, low cost volunteer-driven telephony overflow system for municiple emergency response',
+                this.contact.phone    = clear ? '' : '+15616999715';
             },
             contactFoundStatus( status ){
 
