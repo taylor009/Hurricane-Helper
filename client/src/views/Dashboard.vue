@@ -4,9 +4,11 @@
 
         <b-row class="mt-4">
 
-            <b-col lg="4" class="my-2 d-flex justify-content-center">
+            <b-col lg="4" class="my-2 d-flex flex-column align-items-center">
 
                 <div id="containerDiv"><!--Amazon CCP will go here--></div>
+                <h3 class="mt-2">Agent: {{ agent.name || 'Offline' }}</h3>
+                <h5>Status: {{ agent.status || 'n/a' }}</h5>
 
             </b-col>
             <b-col lg="8" class="my-2">
@@ -17,6 +19,7 @@
 
                         <b-tab title="Current Call" active>
 
+                            <current-call :contact=" currentContact " />
                         </b-tab>
                         <b-tab title="Directory">
 
@@ -54,6 +57,7 @@
 <script>
 
     import FormExample from '../components/Forms/ExampleForm';
+    import CurrentCall from '../components/CurrentCall';
     import AwsConnect from '../mixins/aws-connect';
 
     /**
@@ -63,7 +67,7 @@
     export default {
 
         data: () => ({
-
+            
         }),
         mixins : [
 
@@ -71,7 +75,8 @@
         ],
         components : {
 
-            FormExample
+            FormExample,
+            CurrentCall
         }
     }
 </script>
