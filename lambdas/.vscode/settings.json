@@ -1,0 +1,5 @@
+{
+    // Allows jasmine explorer to work with typescript
+    "jasmineExplorer.nodeArgv": ["-r", "ts-node/register"],
+    "typescript.preferences.quoteStyle": "single"
+}

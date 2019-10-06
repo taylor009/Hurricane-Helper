@@ -64,6 +64,11 @@ Resources:
               CanonicalUser: !GetAtt OriginAccessIdentity.S3CanonicalUserId
             Action: s3:GetObject
             Resource: !Sub "${AppBucket.Arn}/*"
+          - Sid: PublicReadForGetBucketObjects
+            Effect: Allow
+            Principal: '*'
+            Action: 's3:GetObject'
+            Resource: !Sub arn:aws:s3:::${AppBucket}/*
       Bucket: !Ref AppBucket
 
   OriginAccessIdentity:
@@ -125,7 +130,6 @@ Outputs:
     Value: !Join 
       - ''
       - - 'https://'
-        - !Ref AppBucket
         - !GetAtt 
           - AppDistribution
           - DomainName

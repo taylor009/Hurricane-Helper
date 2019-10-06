@@ -1,0 +1,41 @@
+{
+  "name": "hurricane-helper-lambdas",
+  "version": "1.0.1",
+  "description": "Lambdas supporting PBT Hackathon - hurricane helper",
+  "scripts": {
+    "lint": "tslint --project .",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=spec/config/unit.jasmine.json",
+    "integration-test": "ts-node node_modules/jasmine/bin/jasmine --config=spec/config/integration.jasmine.json",
+    "package-dev": "serverless package --stage dev",
+    "deploy-dev": "serverless deploy --stage dev --aws-profile hackathon",
+    "remove-dev": "serverless remove --stage dev",
+    "deploy-prod": "serverless deploy --stage prod",
+    "remove-prod": "serverless remove --stage prod"
+  },
+  "dependencies": {
+    "aws-xray-sdk": "^2.3.4",
+    "source-map-support": "^0.5.10",
+    "typescript-ioc": "^1.2.5",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/jasmine": "^3.3.12",
+    "@types/node": "^10.12.8",
+    "@types/winston": "^2.4.4",
+    "jasmine": "^3.4.0",
+    "serverless": "^1.41.0",
+    "serverless-webpack": "^5.3.1",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taylor009/Hurricane-Helper"
+  },
+  "author": "Hurricane Helper",
+  "license": "Proprietary"
+}

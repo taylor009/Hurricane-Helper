@@ -1,15 +1,28 @@
 <template>
 
-  <div>
+    <b-container class="d-flex align-items-center">
 
-      <h1>This logs you in lmao</h1>
-  </div>
+        <b-row class="w-100">
+
+            <b-col lg="6" offset-lg="3" md="8" offset-md="2">
+
+                <login-form />
+
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
 
+    import LoginForm from '../components/Forms/LoginForm';
+
     export default {
 
+        components : {
+
+            LoginForm
+        }
     }
 </script>
 

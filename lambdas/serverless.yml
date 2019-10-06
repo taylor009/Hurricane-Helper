@@ -1,0 +1,101 @@
+service:
+  name: hurricane-helper-lambdas
+
+plugins:
+  - serverless-webpack
+
+# Getting config vars from files here to keep rest of the file cleaner
+custom:
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  deploymentBucket: ${file(./config.${self:custom.stage}.json):deploymentBucket}
+  accountId: ${file(./config.${self:custom.stage}.json):accountId}
+  connectInstanceId: ${file(./config.${self:custom.stage}.json):connectInstanceId}
+  apiBaseUrl: ${file(./config.${self:custom.stage}.json):apiBaseUrl}
+  dataTable: ${file(./config.${self:custom.stage}.json):dataTable}
+  corsOrigins: ${file(./config.${self:custom.stage}.json):corsOrigins}
+  cors:
+    origins: ${self:custom.corsOrigins}
+    headers:
+      - Content-Type
+      - X-Amz-Date
+      - Authorization
+      - X-Api-Key
+      - X-Amz-Security-Token
+      - X-Amz-User-Agent
+      - x-shop-url
+    allowCredentials: false
+
+provider:
+  name: aws
+  stage: ${self:custom.stage}
+  runtime: nodejs8.10
+  region: ${self:custom.region}
+  deploymentBucket:
+    name: ${self:custom.deploymentBucket}
+  tracing:
+    lambda: true
+  memorySize: 256
+  environment:
+    LOG_LEVEL: debug
+    API_BASE_URL: ${self:custom.apiBaseUrl}
+    DATA_TABLE: ${self:custom.dataTable}
+  stackTags:
+    Client: hackathon
+    Project: ${self:service.name}
+    Environment: ${self:custom.stage}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Scan
+        - dynamodb:Query
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+      Resource: "*"
+
+functions:
+  integrationTest:
+    handler: src/lambda/index.integrationTest
+    description: Tests IOC and db calls
+  dataApi:
+    name: hh-data-${self:custom.stage}
+    handler: src/lambda/index.dataApiLambda
+    description: Retrieves user data based on ANI
+    tags:
+      environment: ${self:custom.stage}
+  saveUser:
+    name: hh-save-user-${self:custom.stage}
+    handler: src/lambda/index.saveUserLambda
+    description: Save user detail
+    tags:
+      environment: ${self:custom.stage}
+    events:
+      - http:
+          method: post
+          path: users
+          cors: ${self:custom.cors}
+
+resources:
+  Resources:
+    ConnectDataApiPermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        Action: lambda:InvokeFunction
+        FunctionName:
+          Ref: DataApiLambdaFunction
+        Principal: connect.amazonaws.com
+        SourceAccount: ${self:custom.accountId}
+        SourceArn: arn:aws:connect:${self:custom.region}:${self:custom.accountId}:instance/${self:custom.connectInstanceId}
+    DataTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.dataTable}
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: key
+            AttributeType: S
+        KeySchema:
+          - AttributeName: key
+            KeyType: HASH

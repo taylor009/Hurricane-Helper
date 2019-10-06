@@ -1,0 +1,9 @@
+{
+    "stage": "dev",
+    "accountId" : "026512454252",
+    "connectInstanceId" : "8441fb10-9621-4480-bd96-5e71c690dd1a",
+    "deploymentBucket": "hackathon-serverless",
+    "apiBaseUrl": "todo",
+    "dataTable": "hackathon-data-dev",
+    "corsOrigins": ["http://localhost:8080", "http://hurricane-helper-dev.s3-website-us-east-1.amazonaws.com", "https://d24ievhur353et.cloudfront.net"]
+}

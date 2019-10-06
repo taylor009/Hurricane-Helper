@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="home d-flex flex-column justify-content-between container">
       <div class="home-top-half row">
         <div class="col-12">
@@ -21,17 +20,16 @@
 
       <div class="home-bottom-half row text-center">
         <div class="signup signup-user col-sm-12 col-md-4">
-          <a href>User Signup</a>
+          <a href="#">User Signup</a>
         </div>
         <div class="signup signup-volunteer col-sm-12 col-md-4">
-          <a href>Volunteer Signup</a>
+          <a href="#">Volunteer Signup</a>
         </div>
         <div class="signup signup-organization col-sm-12 col-md-4">
-          <a href>Organization Signup</a>
+          <a href="#">Organization Signup</a>
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
