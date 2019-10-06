@@ -22,10 +22,7 @@
                             <current-call :contact=" currentContact " />
                         </b-tab>
                         <b-tab title="Directory">
-
-                        </b-tab>
-                        <b-tab title="Call History">
-
+                            <directory-comp />
                         </b-tab>
                         <b-tab title="Status Log">
 
@@ -59,6 +56,7 @@
     import FormExample from '../components/Forms/ExampleForm';
     import CurrentCall from '../components/CurrentCall';
     import AwsConnect from '../mixins/aws-connect';
+    import DirectoryComp from '../components/DirectoryComp';
 
     /**
      * {"ADDRESS":{"name":"ADDRESS","value":"Home Depot Hackathon, Boca Raton, FL 33487"},"FIRST_NAME":{"name":"FIRST_NAME","value":"Alex"},"FOUND":{"name":"FOUND","value":"true"},"HAS_PROMPT":{"name":"HAS_PROMPT","value":"true"},"LANGUAGE":{"name":"LANGUAGE","value":"EN"},"LAST_NAME":{"name":"LAST_NAME","value":"Ciccolella"},"PROMPT":{"name":"PROMPT","value":"Your address on Home Depot Hackathon has recently been cleared of Hurricane warning status."}}
@@ -76,7 +74,11 @@
         components : {
 
             FormExample,
+<<<<<<< HEAD
+            DirectoryComp
+=======
             CurrentCall
+>>>>>>> origin/creating_app_ui_template
         }
     }
 </script>
