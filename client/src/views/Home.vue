@@ -20,13 +20,13 @@
 
       <div class="home-bottom-half row text-center">
         <div class="signup signup-user col-sm-12 col-md-4">
-          <a href="#">User Signup</a>
+          <a href="/signup">User Signup</a>
         </div>
         <div class="signup signup-volunteer col-sm-12 col-md-4">
-          <a href="#">Volunteer Signup</a>
+          <a href="/signup">Volunteer Signup</a>
         </div>
         <div class="signup signup-organization col-sm-12 col-md-4">
-          <a href="#">Organization Signup</a>
+          <a href="/signup">Organization Signup</a>
         </div>
       </div>
     </div>
