@@ -13,6 +13,18 @@ custom:
   connectInstanceId: ${file(./config.${self:custom.stage}.json):connectInstanceId}
   apiBaseUrl: ${file(./config.${self:custom.stage}.json):apiBaseUrl}
   dataTable: ${file(./config.${self:custom.stage}.json):dataTable}
+  corsOrigins: ${file(./config.${self:custom.stage}.json):corsOrigins}
+  cors:
+    origins: ${self:custom.corsOrigins}
+    headers:
+      - Content-Type
+      - X-Amz-Date
+      - Authorization
+      - X-Api-Key
+      - X-Amz-Security-Token
+      - X-Amz-User-Agent
+      - x-shop-url
+    allowCredentials: false
 
 provider:
   name: aws
@@ -53,6 +65,17 @@ functions:
     description: Retrieves user data based on ANI
     tags:
       environment: ${self:custom.stage}
+  saveUser:
+    name: hh-save-user-${self:custom.stage}
+    handler: src/lambda/index.saveUserLambda
+    description: Save user detail
+    tags:
+      environment: ${self:custom.stage}
+    events:
+      - http:
+          method: post
+          path: users
+          cors: ${self:custom.cors}
 
 resources:
   Resources:
