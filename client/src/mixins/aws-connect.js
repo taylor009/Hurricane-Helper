@@ -23,7 +23,8 @@ export default {
                 language : '',
                 last     : '',
                 prompt   : '',
-                notes    : ''
+                notes    : '',
+                phone    : ''
             },
             fromQueue  : null
         },
@@ -74,6 +75,7 @@ export default {
                 this.currentContact.attributes.last     = attributes.LAST_NAME.value;
                 this.currentContact.attributes.prompt   = attributes.PROMPT.value;
                 this.currentContact.attributes.notes    = '';
+                this.currentContact.attributes.phone    = contact.getActiveInitialConnection().getEndpoint().phoneNumber;
             }
         },
         subscribeToContactEvents(contact) {
@@ -85,6 +87,7 @@ export default {
             if (contact.getActiveInitialConnection() 
                 && contact.getActiveInitialConnection().getEndpoint()) {
 
+                // console.log( 'THE ENDPOINT I NEED: ', contact.getActiveInitialConnection().getEndpoint() );
                 this.logInfoMsg("New contact is from " + contact.getActiveInitialConnection().getEndpoint().phoneNumber);
             } else {
 
