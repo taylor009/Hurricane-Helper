@@ -2,6 +2,7 @@ import { Container } from 'typescript-ioc';
 import { EnvConfigService } from '../services/envConfigService';
 import { LoggingService } from '../services/loggingService';
 import { DataApiLambda } from './dataApiLambda';
+import { SaveUserLambda } from './saveUserLambda';
 
 const AWSXRay = require('aws-xray-sdk');
 const AWS = AWSXRay.captureAWS(require('aws-sdk'));
@@ -17,10 +18,15 @@ export const integrationTest = async (event, context, cb) => {
 
 };
 
+export const dataApiLambda = async (event, context, cb) => {
+    const lambda: DataApiLambda = Container.get(DataApiLambda);
+    return await lambda.handler(event, cb);
+};
+
 /**
  * Provides access to the FR Data API
  */
-export const dataApiLambda = async (event, context, cb) => {
-    const lambda: DataApiLambda = Container.get(DataApiLambda);
+export const saveUserLambda = async (event, context, cb) => {
+    const lambda: SaveUserLambda = Container.get(SaveUserLambda);
     return await lambda.handler(event, cb);
 };

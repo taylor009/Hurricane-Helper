@@ -28,13 +28,13 @@ export class DataApiLambda extends BaseLambda {
                 resp.LAST_NAME = user.lastName;
                 resp.LANGUAGE = user.language;
                 resp.ADDRESS = this.formatAddress(user.address);
+            }
 
-                // TODO: Lookup emergency status
-                if(true){
-                    resp.HAS_PROMPT = 'true';
-                    // tslint:disable-next-line: max-line-length
-                    resp.PROMPT = `Your address on ${user.address.line1} has recently been cleared of Hurricane warning status.`;
-                }
+            // TODO: Lookup emergency status
+            if (true) {
+                resp.HAS_PROMPT = 'true';
+                // tslint:disable-next-line: max-line-length
+                resp.PROMPT = `Your address on ${user.address.line1} has recently been cleared of Hurricane warning status.`;
             }
 
             this.logger.debug('result: ', resp);
@@ -46,6 +46,9 @@ export class DataApiLambda extends BaseLambda {
     }
 
     private formatAddress(addr: Address): string {
+        if (!addr) {
+            return '';
+        }
         let result = addr.line1;
         if (addr.line2) {
             result += ', ' + addr.line2;
