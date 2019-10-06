@@ -74,11 +74,8 @@
         components : {
 
             FormExample,
-<<<<<<< HEAD
-            DirectoryComp
-=======
+            DirectoryComp,
             CurrentCall
->>>>>>> origin/creating_app_ui_template
         }
     }
 </script>
