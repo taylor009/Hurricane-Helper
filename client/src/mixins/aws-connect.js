@@ -17,12 +17,13 @@ export default {
             status     : null,
             attributes : {
 
-                found    : '',
+                found    : null,
                 address  : '',
                 first    : '',
                 language : '',
                 last     : '',
                 prompt   : '',
+                notes    : ''
             },
             fromQueue  : null
         },
@@ -66,12 +67,13 @@ export default {
 
                 let attributes = contact.getAttributes();
                 console.log( 'ATTRIBUTES: ', attributes );
-                this.currentContact.attributes.found    = attributes.FOUND.value;
+                this.currentContact.attributes.found    = attributes.FOUND.value == "true";
                 this.currentContact.attributes.address  = attributes.ADDRESS.value;
                 this.currentContact.attributes.first    = attributes.FIRST_NAME.value;
                 this.currentContact.attributes.language = attributes.LANGUAGE.value;
                 this.currentContact.attributes.last     = attributes.LAST_NAME.value;
                 this.currentContact.attributes.prompt   = attributes.PROMPT.value;
+                this.currentContact.attributes.notes    = '';
             }
         },
         subscribeToContactEvents(contact) {

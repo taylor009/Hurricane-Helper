@@ -7,24 +7,24 @@ export default new Vuex.Store({
 
   state: {
 
-    agent : {}
+    contacts : []
   },
   mutations: {
 
-    saveAgent(){
-      
-    }
+    updateContacts: ( state, contacts ) => state.contacts = contacts
   },
   actions: {
 
-    saveAgent( context, agent ){
+    pushContact( context, contact ){
 
-      console.log( 'saving agent: ', agent );
-      console.log( 'saving agent: ', agent );
-
+      const contacts = context.state.contacts;
+      contact.timestamp = new Date().toLocaleTimeString();
+      contacts.push( contact );
+      context.commit( 'updateContacts', contacts );
     }
   },
   getters: {
 
+    contacts : state => state.contacts
   }
 })
