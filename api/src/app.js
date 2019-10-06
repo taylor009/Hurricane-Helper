@@ -66,7 +66,9 @@ const createDynamooseInstance = () => {
 createDynamooseInstance();
 
 // Routes
-const signUpRoutes = require('./routes/signup');
+// const signUpRoutes = require('./routes/signup');
+const loginRoutes = require('./routes/login');
+const directoryRoutes = require('./routes/directory');
 
 
 const app = express();
@@ -76,6 +78,8 @@ app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/api/v1/signup', signUpRoutes);
+// app.use('/api/v1/signup', signUpRoutes);
+app.use('/api/v1/login', loginRoutes);
+app.use('/api/v1/directory', directoryRoutes);
 
 module.exports = app;
