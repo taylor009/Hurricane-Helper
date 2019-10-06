@@ -3,18 +3,16 @@
     <div class="home d-flex flex-column justify-content-between container">
       <div class="home-top-half row">
         <div class="col-12">
-          <h1>This is the Home Page</h1>
+          <h1>Welcome to Hurricane Helper!</h1>
+          <p>Your in depth guide to hurricane safety and support. </p>
           <p>
-            Lorem ipsum dolor amet cronut DIY semiotics YOLO, gastropub pour-over yr 90's williamsburg narwhal XOXO hammock fashion axe church-key activated charcoal.
-            Dreamcatcher cold-pressed af, shaman tilde subway tile pitchfork leggings hella la croix offal freegan hot chicken.
-            Coloring book neutra pok pok whatever, unicorn distillery narwhal kinfolk kale chips wayfarers four loko helvetica fam direct trade DIY.
-            Portland chicharrones plaid, echo park authentic retro poutine master cleanse fam letterpress tattooed.
+            Why you should sign up!
+            Every hurricane season, many of our residents are inadequately prepared for hurricanes. 
+            It is our mission to ensure that all of our residents are safe. By signing up to our system, you will be able to automatically inform your loved ones of any potential dangers as soon as leading experts recognise any threat.
           </p>
           <p>
-            Roof party farm-to-table cloud bread, enamel pin master cleanse tumeric selfies vinyl.
-            Banjo activated charcoal snackwave, pickled plaid tbh viral fam la croix tilde kale chips adaptogen.
-            Yr YOLO authentic unicorn, meditation kitsch farm-to-table.
-            Kogi kale chips tacos, before they sold out health goth kombucha glossier master cleanse hella roof party literally blog cray.
+            Why you should volunteer!
+            There are many reasons to give to a cause, but we want to enable and encourage anyone to support in disaster relief. By volunteering with Hurricane Helper, you will be able to connect people in need with the relief and services they need. 
           </p>
         </div>
       </div>
@@ -50,8 +48,12 @@ export default {
   background-image: url("../../src/assets/hurricane-home.jpg");
 }
 .home {
-  padding: 2.5% 0;
+  padding: 4.5%;
   height: 100%;
   background-color: white;
+}
+
+p {
+  margin: 2.5% 0;
 }
 </style>
