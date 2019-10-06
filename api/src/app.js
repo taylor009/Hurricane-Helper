@@ -64,10 +64,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
-// app.use('/api/v1/signup', signUpRoutes);
-app.use('/api/v1/directory', directoryRoutes);
+
 
 // Routes
+app.use('/api/v1/signup', signUpRoutes);
+app.use('/api/v1/directory', directoryRoutes);
 app.use('/api/v1/login', loginRoutes);
 app.use('/api/v1/users/:id', userRoutes);
 app.use('/api/v1/directories', directoriesRoutes);
