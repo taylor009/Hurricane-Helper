@@ -76,6 +76,17 @@ functions:
           method: post
           path: users
           cors: ${self:custom.cors}
+  getDirectory:
+      name: hh-get-directory-${self:custom.stage}
+      handler: src/lambda/index.getDirectory
+      description: Get list of charities and contractors
+      tags:
+        environment: ${self:custom.stage}
+      events:
+        - http:
+            method: get
+            path: directories
+            cors: ${self:custom.cors}
 
 resources:
   Resources:
