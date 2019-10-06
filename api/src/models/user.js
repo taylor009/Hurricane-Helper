@@ -17,5 +17,4 @@ const UserSchema = new Schema({
     }
 });
 
-
 exports.User = dynamoose.model('User', UserSchema);

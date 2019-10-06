@@ -1,11 +1,10 @@
+'use strict';
 const express = require('express');
 const router = express.Router();
 
-router.post('', function(req, res) {
-    let username = req.params.username;
-    let passwd = req.params.password;
+const loginController = require('../controllers/login');
 
-    
-});
+router.post('', loginController.loginUser);
 
 module.exports = router;
+
