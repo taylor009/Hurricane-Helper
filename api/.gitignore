@@ -1,3 +1,4 @@
 ../.idea
 node_modules
-api/src/logs
+/src/logs
+./src/config/.env
