@@ -1,4 +1,5 @@
 <template>
+<div class="background-image">
     <div class="home d-flex flex-column justify-content-between container">
       <div class="home-top-half row">
         <div class="col-12">
@@ -30,6 +31,7 @@
         </div>
       </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -42,8 +44,14 @@ export default {
 </script>
 
 <style scoped>
+.background-image {
+  padding: 0;
+  height: 100%;
+  background-image: url("../../src/assets/hurricane-home.jpg");
+}
 .home {
   padding: 2.5% 0;
   height: 100%;
+  background-color: white;
 }
 </style>
