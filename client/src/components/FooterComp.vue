@@ -8,7 +8,7 @@
 
         <b-col>
 
-          testing footer lmao
+          basic footer
         </b-col>
       </b-row>
     </b-container>
