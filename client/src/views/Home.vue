@@ -3,15 +3,15 @@
     <div class="home d-flex flex-column justify-content-between container">
       <div class="home-top-half row">
         <div class="col-12">
-          <h1>Welcome to Hurricane Helper!</h1>
-          <p>Your in depth guide to hurricane safety and support. </p>
+          <h1>Welcome to EDNA!</h1>
+          <h3>Your in depth guide to hurricane safety and support. </h3>
+          <h5>Why you should sign up!</h5> 
           <p>
-            Why you should sign up!
             Every hurricane season, many of our residents are inadequately prepared for hurricanes. 
             It is our mission to ensure that all of our residents are safe. By signing up to our system, you will be able to automatically inform your loved ones of any potential dangers as soon as leading experts recognise any threat.
           </p>
+          <h5>Why you should volunteer!</h5>
           <p>
-            Why you should volunteer!
             There are many reasons to give to a cause, but we want to enable and encourage anyone to support in disaster relief. By volunteering with Hurricane Helper, you will be able to connect people in need with the relief and services they need. 
           </p>
         </div>

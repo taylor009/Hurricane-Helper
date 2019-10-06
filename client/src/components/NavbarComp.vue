@@ -1,7 +1,7 @@
 <template>
 
   <b-nav id="nav" class="d-flex align-items-center">
-
+    <img id="logo" src="../../src/assets/edna-logo.png" alt="logo">
     <b-nav-item to="/">Home</b-nav-item>
     <b-nav-item to="/dashboard">Dashboard</b-nav-item>
 
@@ -30,5 +30,8 @@ export default {};
         color: #42b983;
       }
     }
+  }
+  #logo {
+    height: 50px;
   }
 </style>
