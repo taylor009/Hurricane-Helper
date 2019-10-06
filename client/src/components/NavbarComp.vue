@@ -3,7 +3,6 @@
   <b-nav id="nav" class="d-flex align-items-center">
 
     <b-nav-item to="/">Home</b-nav-item>
-    <b-nav-item to="/about">About</b-nav-item>
     <b-nav-item to="/dashboard">Dashboard</b-nav-item>
 
     <b-nav-item to="/login">Login</b-nav-item>

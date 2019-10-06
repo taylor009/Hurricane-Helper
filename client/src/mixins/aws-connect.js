@@ -17,12 +17,14 @@ export default {
             status     : null,
             attributes : {
 
-                found    : '',
+                found    : null,
                 address  : '',
                 first    : '',
                 language : '',
                 last     : '',
                 prompt   : '',
+                notes    : '',
+                phone    : ''
             },
             fromQueue  : null
         },
@@ -66,12 +68,14 @@ export default {
 
                 let attributes = contact.getAttributes();
                 console.log( 'ATTRIBUTES: ', attributes );
-                this.currentContact.attributes.found    = attributes.FOUND.value;
+                this.currentContact.attributes.found    = attributes.FOUND.value == "true";
                 this.currentContact.attributes.address  = attributes.ADDRESS.value;
                 this.currentContact.attributes.first    = attributes.FIRST_NAME.value;
                 this.currentContact.attributes.language = attributes.LANGUAGE.value;
                 this.currentContact.attributes.last     = attributes.LAST_NAME.value;
                 this.currentContact.attributes.prompt   = attributes.PROMPT.value;
+                this.currentContact.attributes.notes    = '';
+                this.currentContact.attributes.phone    = contact.getActiveInitialConnection().getEndpoint().phoneNumber;
             }
         },
         subscribeToContactEvents(contact) {
@@ -83,6 +87,7 @@ export default {
             if (contact.getActiveInitialConnection() 
                 && contact.getActiveInitialConnection().getEndpoint()) {
 
+                // console.log( 'THE ENDPOINT I NEED: ', contact.getActiveInitialConnection().getEndpoint() );
                 this.logInfoMsg("New contact is from " + contact.getActiveInitialConnection().getEndpoint().phoneNumber);
             } else {
 

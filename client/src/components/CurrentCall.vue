@@ -1,9 +1,10 @@
 <template>
 
   <div>
-
+    
     <h3>Call Status: <span :class=" statusClass( contact.status ) "> {{ statusText( contact.status ) }}</span></h3>
-    <h5>From Queue: {{ contact.fromQueue || 'NO QUEUE' }}</h5>
+    <h5>From Number: {{ contact.phone || 'n/a' }}</h5>
+    <h5 class="text-muted">From Queue: {{ contact.fromQueue || 'NO QUEUE' }}</h5>
 
     <contact-form :contact=" contact.attributes "/>
   </div>

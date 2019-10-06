@@ -9,7 +9,7 @@
           <b-link class="contractor-website">{{ item.website }}</b-link>
         </div>
         <div>
-          <b-button variant="danger">Add to Call</b-button>
+          <b-button variant="primary">Add to Call</b-button>
         </div>
     </b-list-group-item>
 
