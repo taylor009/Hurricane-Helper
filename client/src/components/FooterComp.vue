@@ -7,8 +7,7 @@
       <b-row>
 
         <b-col>
-
-          basic footer
+          &copy; Emergency Distaster Network Application 
         </b-col>
       </b-row>
     </b-container>
@@ -23,10 +22,6 @@ export default {};
 footer {
   display: flex;
   align-items: center;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: #ccc;
 }
 </style>
