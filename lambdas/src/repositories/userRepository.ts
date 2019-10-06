@@ -30,4 +30,13 @@ export class UserRepository {
         this.logger.debug('getOne:model', result);
         return result.Item as User;
     }
+
+    public async put(model: User) {
+        const params = {
+            TableName: this.tableName,
+            Item: model,
+        };
+        const result = await this.dynamoDb.put(params).promise();
+        return params.Item;
+    }
 }
