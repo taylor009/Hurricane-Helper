@@ -8,10 +8,11 @@
     "dev": "nodemon server.js",
     "test": "cross-env NODE_ENV=development mocha --watch --recursive 'api/test/**/*.test.js'",
     "coverage": "cross-env NODE_ENV=development nyc --reporter=text yarn api/test"
+
   },
   "dependencies": {
-    "argon2": "^0.25.0",
     "aws-sdk": "^2.543.0",
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "dotenv": "^8.1.0",
     "dynamoose": "^1.11.1",

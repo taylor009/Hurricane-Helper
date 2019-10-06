@@ -4,6 +4,13 @@ const router = express.Router();
 
 const userController = require('../controllers/user');
 
-router.get('', userController.createUser);
+router.get('', (req, res, next) =>
+{
+   res.send('Hello World');
+   next();
+});
+
+router.post('', userController.createUser);
 
 module.exports = router;
+
