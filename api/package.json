@@ -8,6 +8,7 @@
     "dev": "nodemon server.js",
     "test": "cross-env NODE_ENV=development mocha --watch --recursive 'api/test/**/*.test.js'",
     "coverage": "cross-env NODE_ENV=development nyc --reporter=text yarn api/test"
+
   },
   "dependencies": {
     "aws-sdk": "^2.543.0",

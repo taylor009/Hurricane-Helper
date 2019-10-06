@@ -13,3 +13,4 @@ router.get('', (req, res, next) =>
 router.post('', userController.createUser);
 
 module.exports = router;
+
