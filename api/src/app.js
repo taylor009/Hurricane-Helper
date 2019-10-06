@@ -22,41 +22,10 @@ AWS.config.update({region: "us-east-1"});
 // Create the DynamoDB service object
 const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
-const params = {
-    AttributeDefinitions : [
-        {
-            AttributeName: 'CUSTOMER_ID',
-            AttributeType: 'N'
-        },
-        {
-            AttributeName: 'CUSTOMER_NAME',
-            AttributeType: 'S'
-        }
-    ],
-    KeySchema            : [
-        {
-            AttributeName: 'CUSTOMER_ID',
-            KeyType      : 'HASH'
-        },
-        {
-            AttributeName: 'CUSTOMER_NAME',
-            KeyType      : 'RANGE'
-        }
-    ],
-    ProvisionedThroughput: {
-        ReadCapacityUnits : 1,
-        WriteCapacityUnits: 1
-    },
-    TableName            : 'CUSTOMER_LIST',
-    StreamSpecification  : {
-        StreamEnabled: false
-    }
-};
-
 const createDynamooseInstance = () => {
     dynamoose.AWS.config.update({
-        accessKeyId: 'AKID',
-        secretAccessKey: 'SECRET',
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
         region: 'us-east-1'
     });
     dynamoose.setDDB(ddb); // This defaults to "http://localhost:8000"
@@ -70,6 +39,19 @@ const signUpRoutes = require('./routes/signup');
 
 
 const app = express();
+
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+    );
+    next();
+});
 
 app.use(morgan('dev'));
 app.use(helmet());
