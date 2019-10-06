@@ -8,7 +8,10 @@ const morgan     = require('morgan');
 const helmet     = require('helmet');
 const bodyParser = require('body-parser');
 const logger     = require('./config/logger');
+
+// Imported Route Files
 const loginRoutes = require('./routes/login');
+const directoryRoutes = require('./routes/directory');
 const userRoutes  = require('./routes/users');
 const directoriesRoutes = require('./routes/directories');
 const smsRoutes = require('./routes/sms');
@@ -21,8 +24,6 @@ let myConfig        = new AWS.Config({
     credentials: myCredentials, region     : 'us-east-1',
 });
 
-
-// Load the AWS SDK for Node.js
 // Set the region
 AWS.config.update({region: "us-east-1"});
 
@@ -38,14 +39,7 @@ const createDynamooseInstance = () => {
     dynamoose.setDDB(ddb); // This defaults to "http://localhost:8000"
 };
 
-
 createDynamooseInstance();
-
-// Routes
-// const signUpRoutes = require('./routes/signup');
-const loginRoutes = require('./routes/login');
-const directoryRoutes = require('./routes/directory');
-
 
 const app = express();
 
@@ -71,7 +65,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 // app.use('/api/v1/signup', signUpRoutes);
 app.use('/api/v1/directory', directoryRoutes);
 
-
 // Routes
 app.use('/api/v1/login', loginRoutes);
 app.use('/api/v1/users/:id', userRoutes);
@@ -79,7 +72,6 @@ app.use('/api/v1/directories', directoriesRoutes);
 app.use('/api/v1/sms/:id', smsRoutes);
 app.use('/api/v1/sos/:id', sosRoutes);
 app.use('/api/v1/okay/:id', okayRoutes);
-
 
 
 module.exports = app;
