@@ -19,13 +19,13 @@
 
       <div class="home-bottom-half row text-center">
         <div class="signup signup-user col-sm-12 col-md-4">
-          <a href="/signup">User Signup</a>
+          <router-link to="/signup">User Signup</router-link>
         </div>
         <div class="signup signup-volunteer col-sm-12 col-md-4">
-          <a href="/signup">Volunteer Signup</a>
+          <router-link to="/signup">Volunteer Signup</router-link>
         </div>
         <div class="signup signup-organization col-sm-12 col-md-4">
-          <a href="/signup">Organization Signup</a>
+          <router-link to="/signup">Organization Signup</router-link>
         </div>
       </div>
     </div>
