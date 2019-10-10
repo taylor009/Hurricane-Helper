@@ -1,4 +1,4 @@
-# Hurricane-Helper
+# Hurricane-Helper (This project WON First Place In the Hackathon)
 
 ## Demo (requires login)
 
