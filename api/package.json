@@ -11,7 +11,7 @@
 
   },
   "dependencies": {
-    "aws-sdk": "^2.543.0",
+    "aws-sdk": "^2.814.0",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "dotenv": "^8.1.0",
