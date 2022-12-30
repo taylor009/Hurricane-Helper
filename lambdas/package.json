@@ -24,7 +24,7 @@
     "@types/node": "^10.12.8",
     "@types/winston": "^2.4.4",
     "jasmine": "^3.4.0",
-    "serverless": "^1.41.0",
+    "serverless": "^1.83.3",
     "serverless-webpack": "^5.3.1",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.1.0",
